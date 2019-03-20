@@ -4,9 +4,34 @@
 	<meta charset="UTF-8">
 	<title>TDD</title>
 	<link rel="stylesheet" href="index.css">
-	<script src="index.js"></script>
 </head>
 <body>
-   tu codigo aqui
 </body>
+<script src="engine.js"></script>
+<script>
+const body = document.getElementsByTagName('body')[0];
+const table = startEngine({
+	rows: 3, cols: 3, colsL: 1, rowsL: 1,
+	infinite: true, autoSelect: true
+});
+body.prepend(table);
+
+window.addEventListener("keydown", onkeydown);
+
+function onkeydown($event){
+	// console.log($event);
+	switch($event.which){
+		case 65:
+		case 37: moveToLeft(table); break;
+		case 87:
+		case 38: moveToUp(table); break;
+		case 68:
+		case 39: moveToRight(table); break;
+		case 83:
+		case 40: moveToDown(table); break;
+		default:
+			console.debug('no mapped:', $event.which);
+	}
+}
+</script>
 </html>
