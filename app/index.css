@@ -1,0 +1,23 @@
+table {
+	margin: 35px auto 0 auto;
+}
+table, td {
+	border: 2px solid black;
+}
+td {
+	width: 35px;
+	height: 35px;
+	font-size: 9px;
+	font-family: verdana;
+	text-align: center;
+	font-weight: bold;
+}
+td.limit {
+	background-color: #D9402A;
+}
+td.normal {
+	background-color: #D9D9D9;
+}
+td.selected {
+	background-color: green;
+}
